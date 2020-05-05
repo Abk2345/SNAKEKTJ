@@ -1,0 +1,215 @@
+
+            *{
+                margin: 0;
+                padding: 0;
+                font-family:Georgia, 'Times New Roman', Times, serif;
+             }
+            .name{
+                font-style: italic;
+            }
+            body{
+                background-color: #000000;
+                background-image: linear-gradient(to right,yellowgreen,green,greenyellow);
+            }
+              .div1{
+                width: 120px;
+                height: 120px;
+                background-color: red;
+                animation-name: example;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+              }
+              
+            @keyframes example {
+                0%   {background-color:gray;}
+                25%  {background-color: black;}
+                50%  {background-color: teal;}
+                100% {background-color: green;}
+              }
+            .wrap{
+                margin-left: auto;
+                margin-right: auto;
+            }
+            header{
+                width: 340px;
+                font-size: 0;
+            }
+            canvas{
+                display: none;
+                border-style: solid;
+                border-width: 10px;
+                border-color: #FFFFFF;
+            }
+            canvas:focus{
+                outline: none;
+            }
+            
+            /* Top Styles */
+            h1{
+                display: inline-block;
+                width: 100px;
+                font-size: 32px;
+                color: #FFFFFF;
+            }
+            .score{
+                display: inline-block;
+                width: 240px;
+                font-size: 20px;
+                color: #FFFFFF;
+                text-align: right;
+            }
+            .score_value{
+                font-size: 20px;
+            }
+            
+            
+            
+            /* All screens style */
+            #gameover a, #setting a, #menu a{
+                display: block;
+            }
+       
+            #gameover a:hover, #setting a:hover, #menu a:hover{
+                cursor: pointer;
+            }
+            
+            #gameover a:hover::before, #setting a:hover::before, #menu a:hover::before{
+                content: ">";
+                margin-right: 5px;
+            }
+            
+            /* Menu Screen Style */
+            #menu{
+                display: block;
+                width: 340px;
+                padding-top: 95px;
+                padding-bottom: 95px;
+                font-size: 40px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                color: black;
+                background-color: gray;
+            }
+            
+            #menu h2{
+                -webkit-animation: logo-ani 2000ms linear infinite;
+                        animation: logo-ani 2000ms linear infinite;
+                margin-bottom: 30px;
+                
+            }
+            
+            #menu a{
+                font-size: 30px;
+            }
+            
+            @-webkit-keyframes logo-ani{
+               50%{-webkit-transform: scale(1.3,1.3);}
+              100%{-webkit-transform: scale(1.0,1.0);}
+            }
+ 
+            @keyframes logo-ani{
+               50%{transform: scale(1.3,1.3);}
+              100%{transform: scale(1.0,1.0);}
+            }
+            
+            
+            /* Game Over Screen Style */
+            
+            #gameover{
+                display: none;
+                width: 340px;
+                padding-top: 95px;
+                padding-bottom: 95px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                font-size: 30px;
+                color: #FFF;
+            }
+            
+            #gameover p{
+                margin-top: 25px;
+                font-size: 20px;
+            }
+                 
+            /* Settings Screen Style */
+            #setting{
+                display: none;
+                width: 340px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-top: 85px;
+                padding-bottom: 85px;
+                font-size: 30px;
+                background-color: burlywood;
+                color: #FFF;
+                text-align: center;
+            }
+            
+            #setting h2{
+                margin-bottom: 15px;
+            }
+            
+            #setting p{
+                margin-top: 10px;
+            }
+            
+            #setting input{
+                display:none;
+            }
+            
+            #setting label{
+                cursor: pointer;
+            }
+            
+            #setting input:checked + label{
+                background-color: #FFF;
+                color: #000;
+            }
+            .footer1{
+                color:black;
+                background-color: teal;
+                height: 70px;
+                 margin-top:150px;
+                text-align: center;
+                font-size:20px;
+            }
+            .footer1 i{
+                color:black;
+            }
+            .footer1 i:hover{
+                cursor:pointer;
+                color:white;
+            }
+            @media only screen and (max-width: 600px)
+            {
+                canvas{
+                    width: 280px;
+                    height: 280px;
+                }
+                header{
+                    width: 285px;
+                }
+                .score{
+                    width: 185px;
+                }
+                #gameover{
+                    width: 285px;
+                }
+                #menu{
+                    width: 285px;
+                    height:180px;
+                }
+                .div1{
+                    margin-bottom: 10px;
+                    width: 90px;
+                    height: 90px;
+                }
+                h1{
+                    font-size: 22px;
+                }
+                .footer1{
+                    margin-top: 30px;
+                }
+            }
